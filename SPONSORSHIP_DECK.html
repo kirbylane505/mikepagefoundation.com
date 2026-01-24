@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love on the Lawn - Sponsorship Opportunities 2025</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: white;
+        }
+
+        .page {
+            page-break-after: always;
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* Cover Page */
+        .cover {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .cover h1 span {
+            color: #e94560;
+        }
+
+        .cover h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .cover .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 60px;
+        }
+
+        .cover .date {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            color: #e94560;
+            font-weight: 600;
+        }
+
+        /* Content Pages */
+        h2.section-title {
+            font-size: 2rem;
+            color: #1a1a2e;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #e94560;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #0f3460;
+            margin: 25px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #e94560;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #1a1a2e;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Tier Cards */
+        .tier {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            border-left: 5px solid #e94560;
+        }
+
+        .tier.title {
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            color: white;
+            border-left: 5px solid #e94560;
+        }
+
+        .tier.title h3 {
+            color: white;
+        }
+
+        .tier.title .price {
+            color: #e94560;
+        }
+
+        .tier h3 {
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tier .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #e94560;
+        }
+
+        .tier ul {
+            margin: 15px 0 0 20px;
+        }
+
+        .tier li {
+            margin: 8px 0;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 5rem;
+            color: #e94560;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.5;
+            font-family: serif;
+        }
+
+        .quote-box p {
+            color: white;
+            font-size: 1.3rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-box cite {
+            display: block;
+            margin-top: 20px;
+            color: #e94560;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Headliners */
+        .headliner-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .headliner {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .headliner .year {
+            color: #e94560;
+            font-weight: 600;
+        }
+
+        .headliner .name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 5px 0;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #e94560;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Growth Chart */
+        .growth-visual {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 200px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .growth-bar {
+            width: 80px;
+            background: linear-gradient(to top, #e94560, #ff7b93);
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 10px;
+        }
+
+        .growth-bar .number {
+            font-size: 1.2rem;
+        }
+
+        .growth-bar .year {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        .page-footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="page cover">
+        <h1>LOVE ON THE <span>LAWN</span></h1>
+        <h2>Sponsorship Opportunities</h2>
+        <div class="date">August 30, 2025 | Festival Park, Elgin, IL</div>
+        <p class="tagline">Illinois' Largest Family Reunion</p>
+    </div>
+
+    <!-- The Opportunity -->
+    <div class="page">
+        <h2 class="section-title">The Opportunity</h2>
+
+        <p style="font-size: 1.2rem;">Love on the Lawn has grown from 550 attendees to <strong>5,400+</strong> in just four years, making it <strong>Illinois' largest family reunion</strong> and one of the Midwest's most authentic community festivals.</p>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">5,400+</div>
+                <div class="stat-label">Attendees (2024)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">10x</div>
+                <div class="stat-label">Growth in 4 Years</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Safety Incidents</div>
+            </div>
+        </div>
+
+        <div class="growth-visual">
+            <div class="growth-bar" style="height: 30px;">
+                <span class="number">550</span>
+                <span class="year">2021</span>
+            </div>
+            <div class="growth-bar" style="height: 90px;">
+                <span class="number">3,000</span>
+                <span class="year">2022</span>
+            </div>
+            <div class="growth-bar" style="height: 160px;">
+                <span class="number">5,400</span>
+                <span class="year">2024</span>
+            </div>
+            <div class="growth-bar" style="height: 200px;">
+                <span class="number">7,000+</span>
+                <span class="year">2025</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p>It's like we haven't had one argument or fight at our event in four years... because I think we lead with love, and they know what they coming out there for.</p>
+            <cite>— Mike Page, Founder</cite>
+        </div>
+
+        <div class="page-footer">
+            <span>Love on the Lawn</span>
+            <span>LOTLfest.com</span>
+        </div>
+    </div>
+
+    <!-- Past Headliners -->
+    <div class="page">
+        <h2 class="section-title">World-Class Talent</h2>
+
+        <div class="headliner-grid">
+            <div class="headliner">
+                <div class="year">2024</div>
+                <div class="name">Musiq Soulchild</div>
+                <div class="desc">Grammy-Nominated R&B Artist</div>
+            </div>
+            <div class="headliner">
+                <div class="year">2025</div>
+                <div class="name">Kid Capri</div>
+                <div class="desc">Legendary Grammy-Winning DJ</div>
+            </div>
+            <div class="headliner">
+                <div class="year">2025</div>
+                <div class="name">Lenny Williams</div>
+                <div class="desc">Soul Music Legend</div>
+            </div>
+            <div class="headliner">
+                <div class="year">Featured</div>
+                <div class="name">DJ Sluggo</div>
+                <div class="desc">House Music Pioneer</div>
+            </div>
+        </div>
+
+        <h3>What Makes Us Different</h3>
+        <table>
+            <tr>
+                <td><strong>Authentic Community Event</strong></td>
+                <td>Not a corporate festival—a genuine grassroots gathering</td>
+            </tr>
+            <tr>
+                <td><strong>Family-First Values</strong></td>
+                <td>Free Kids Zone, all-ages programming, safe environment</td>
+            </tr>
+            <tr>
+                <td><strong>Perfect Safety Record</strong></td>
+                <td>Zero incidents in 4 years of operation</td>
+            </tr>
+            <tr>
+                <td><strong>Premium R&B/Hip-Hop Focus</strong></td>
+                <td>Grammy-winning artists, quality production</td>
+            </tr>
+            <tr>
+                <td><strong>Regional Draw</strong></td>
+                <td>2 minutes from Metra—accessible to Chicago metro</td>
+            </tr>
+        </table>
+
+        <h3>Media Coverage</h3>
+        <p>Featured on: <strong>FOX 32 Chicago</strong> | <strong>ABC 7 Chicago</strong> | <strong>Chicago Tribune</strong> | <strong>Daily Herald</strong> | <strong>Northern Public Radio</strong></p>
+
+        <div class="page-footer">
+            <span>Love on the Lawn</span>
+            <span>LOTLfest.com</span>
+        </div>
+    </div>
+
+    <!-- Sponsorship Tiers -->
+    <div class="page">
+        <h2 class="section-title">Sponsorship Tiers</h2>
+
+        <div class="tier title">
+            <h3>
+                <span>TITLE SPONSOR</span>
+                <span class="price">$50,000</span>
+            </h3>
+            <p><em>"[Your Brand] Presents Love on the Lawn"</em></p>
+            <ul>
+                <li>Name/logo in ALL marketing materials</li>
+                <li>Main stage naming rights</li>
+                <li>60-second video on main screens</li>
+                <li>Premium 20x20 booth location</li>
+                <li>20 VIP tickets + reserved parking</li>
+                <li>Social media features (10+ posts)</li>
+                <li>Press release inclusion</li>
+                <li>Speaking opportunity on main stage</li>
+                <li>First right of refusal for 2026-2027</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+            <h3>
+                <span>PLATINUM SPONSOR</span>
+                <span class="price">$25,000</span>
+            </h3>
+            <ul>
+                <li>Logo on main stage banner</li>
+                <li>Premium 15x15 booth location</li>
+                <li>30-second video on screens</li>
+                <li>12 VIP tickets + parking</li>
+                <li>Social media features (5+ posts)</li>
+                <li>VIP meet & greet with headliner</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+            <h3>
+                <span>GOLD SPONSOR</span>
+                <span class="price">$10,000</span>
+            </h3>
+            <ul>
+                <li>10x10 booth space</li>
+                <li>6 VIP tickets</li>
+                <li>Logo on website and programs</li>
+                <li>Social media mentions (3)</li>
+                <li>On-site signage + PA announcements</li>
+            </ul>
+        </div>
+
+        <div class="page-footer">
+            <span>Love on the Lawn</span>
+            <span>LOTLfest.com</span>
+        </div>
+    </div>
+
+    <!-- More Tiers + Demographics -->
+    <div class="page">
+        <h2 class="section-title">Additional Packages</h2>
+
+        <div class="tier">
+            <h3>
+                <span>SILVER SPONSOR</span>
+                <span class="price">$5,000</span>
+            </h3>
+            <ul>
+                <li>10x10 booth space</li>
+                <li>4 general admission tickets</li>
+                <li>Logo on website + signage</li>
+                <li>Social media mention</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+            <h3>
+                <span>COMMUNITY PARTNER</span>
+                <span class="price">$2,500</span>
+            </h3>
+            <ul>
+                <li>Logo on website</li>
+                <li>Social media mention</li>
+                <li>2 general admission tickets</li>
+                <li>Name listed in program</li>
+            </ul>
+        </div>
+
+        <h3>Custom Packages Available</h3>
+        <table>
+            <tr>
+                <td><strong>Kids Zone Sponsor</strong></td>
+                <td>Brand the free children's area</td>
+            </tr>
+            <tr>
+                <td><strong>VIP Lounge Sponsor</strong></td>
+                <td>Exclusive branding in premium area</td>
+            </tr>
+            <tr>
+                <td><strong>Stage Sponsor</strong></td>
+                <td>Name a performance stage</td>
+            </tr>
+            <tr>
+                <td><strong>Car Show Sponsor</strong></td>
+                <td>Exclusive automotive category</td>
+            </tr>
+            <tr>
+                <td><strong>In-Kind Contributions</strong></td>
+                <td>Beverages, food, services, equipment</td>
+            </tr>
+        </table>
+
+        <h3>Audience Demographics</h3>
+        <table>
+            <tr>
+                <td><strong>Age</strong></td>
+                <td>25-45 (65%) | 45+ (25%) | Under 25 (10%)</td>
+            </tr>
+            <tr>
+                <td><strong>Gender</strong></td>
+                <td>55% Female | 45% Male</td>
+            </tr>
+            <tr>
+                <td><strong>Household Income</strong></td>
+                <td>$50K - $150K average</td>
+            </tr>
+            <tr>
+                <td><strong>Location</strong></td>
+                <td>Elgin/Fox Valley (40%) | Chicago Metro (50%) | Other (10%)</td>
+            </tr>
+        </table>
+
+        <div class="page-footer">
+            <span>Love on the Lawn</span>
+            <span>LOTLfest.com</span>
+        </div>
+    </div>
+
+    <!-- The Mission + Contact -->
+    <div class="page">
+        <h2 class="section-title">The Mission Behind the Music</h2>
+
+        <p>Love on the Lawn is produced by <strong>Impossible Dreamz Music Group (IDMG)</strong> with community impact through the <strong>Mike Page Foundation</strong>, a 501(c)(3) nonprofit organization.</p>
+
+        <h3>Foundation Impact</h3>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Families Fed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Youth Teams Sponsored</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Years of Impact</div>
+            </div>
+        </div>
+
+        <p><strong>Your sponsorship supports both the festival AND community initiatives.</strong></p>
+
+        <ul>
+            <li>Youth sports sponsorships (Elgin Steelers, Northwest Tide, Elgin Fire Soccer)</li>
+            <li>Emergency relief for families in crisis</li>
+            <li>Youth development "funneling program" from Pop Warner to college</li>
+            <li>Community Hall of Fame celebrating local success stories</li>
+        </ul>
+
+        <div class="contact-box">
+            <h3>Let's Partner</h3>
+            <p><strong>Email:</strong> sponsorship@lotlfest.com</p>
+            <p><strong>Website:</strong> www.LOTLfest.com</p>
+            <p style="margin-top: 20px; font-size: 1rem;">Mike Page, Founder | @mikepagelivin</p>
+        </div>
+
+        <div class="page-footer">
+            <span>Love on the Lawn 2025</span>
+            <span>August 30, 2025 | Festival Park, Elgin, IL</span>
+        </div>
+    </div>
+</body>
+</html>

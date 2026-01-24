@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Page Foundation | Empowering Youth Through Sports, Music & Community</title>
+    <meta name="description" content="The Mike Page Foundation is dedicated to youth empowerment, unity, and community uplift through sports, music, and humanitarian initiatives in Elgin, Illinois.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #e94560;
+            --accent: #0f3460;
+            --gold: #f5a623;
+            --light: #f8f9fa;
+            --dark: #0a0a0a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .donate-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #ff5a75;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Impact Stats */
+        .impact {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .impact-item {
+            padding: 30px;
+        }
+
+        .impact-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .impact-label {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mission-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .mission-text p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .mission-quote {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .mission-quote::before {
+            content: '"';
+            font-size: 6rem;
+            color: var(--secondary);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.5;
+            font-family: serif;
+        }
+
+        .mission-quote p {
+            font-size: 1.3rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-quote cite {
+            display: block;
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .program-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+        }
+
+        .program-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .program-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* LOTL Section */
+        .lotl {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+        }
+
+        .lotl-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .lotl h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .lotl h2 span {
+            color: var(--secondary);
+        }
+
+        .lotl p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .lotl-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .lotl-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .lotl-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .lotl-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Get Involved Section */
+        .involve {
+            padding: 100px 0;
+        }
+
+        .involve-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .involve-card {
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .involve-card.donate {
+            background: linear-gradient(135deg, var(--secondary), #ff5a75);
+            color: white;
+        }
+
+        .involve-card.volunteer {
+            background: var(--primary);
+            color: white;
+        }
+
+        .involve-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .involve-card p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .involve-card .btn {
+            background: white;
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .involve-card .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .contact-details strong {
+            color: var(--primary);
+            min-width: 80px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #ff5a75;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            opacity: 0.7;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mission-content,
+            .lotl-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .involve-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Mike Page <span>Foundation</span></a>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#lotl">Love on the Lawn</a></li>
+                <li><a href="#involve">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#donate" class="donate-btn">Donate Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building Stronger Communities Through <span>Love</span></h1>
+                <p>The Mike Page Foundation is dedicated to youth empowerment, unity, and community uplift through sports, music, and humanitarian initiatives.</p>
+                <div class="hero-buttons">
+                    <a href="#donate" class="btn-primary">Make a Donation</a>
+                    <a href="#programs" class="btn-secondary">Our Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="impact">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">200+</div>
+                    <div class="impact-label">Families Fed</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">5,400+</div>
+                    <div class="impact-label">Festival Attendees</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">3</div>
+                    <div class="impact-label">Youth Teams Sponsored</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">4</div>
+                    <div class="impact-label">Years of Impact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>Empowering the next generation through sports, music, and community support</p>
+            </div>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h3>Leading With Love</h3>
+                    <p>The Mike Page Foundation was born from a simple belief: real success isn't measured by what you achieve for yourself, but by what you make possible for others.</p>
+                    <p>Founded by Elgin native Mike Page, we focus on creating pathways for young people to succeed—whether through athletics, music, or humanitarian support. We believe every young person deserves to see that success is possible, regardless of their circumstances.</p>
+                    <p>Through our programs, we've sponsored youth sports teams, fed hundreds of families in need, and created Illinois' largest family reunion—proving that when we lead with love, amazing things happen.</p>
+                </div>
+                <div class="mission-quote">
+                    <img src="assets/images/mike-page-headshot.png" alt="Mike Page, Founder" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--secondary); margin-bottom: 20px;">
+                    <p>I hope they can see that it's possible without having a father in your life... you can still make it out.</p>
+                    <cite>— Mike Page, Founder</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>Creating opportunities through sports, music, and community care</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🏈</div>
+                    <h3>Youth Sports Sponsorship</h3>
+                    <p>We proudly sponsor the Elgin Northwest Tide, Elgin Steelers youth football teams, and Elgin Fire Soccer team—giving young athletes the support they need to compete and grow.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🎵</div>
+                    <h3>Music & Arts Initiative</h3>
+                    <p>Through our connection with Impossible Dreamz Music Group, we create pathways for young artists to develop their talents and pursue careers in the music industry.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🤝</div>
+                    <h3>Community Relief</h3>
+                    <p>When crisis hits, we respond. We've fed over 200 families in need and provided relief to those affected by the Tent City fires—because community means taking care of each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love on the Lawn Section -->
+    <section class="lotl" id="lotl">
+        <div class="container">
+            <div class="lotl-content">
+                <div>
+                    <h2>Love on the <span>Lawn</span></h2>
+                    <p>What started as a vision to bring Elgin together has grown into Illinois' largest family reunion. Love on the Lawn is more than a music festival—it's a celebration of community, connection, and the universal language of music.</p>
+                    <p>Every Labor Day weekend, thousands gather at Festival Park for Grammy-winning artists, local talent, food, vendors, and most importantly—love. In four years, we've maintained a perfect safety record because we lead with love, and everyone who comes knows what they're there for.</p>
+                    <a href="https://www.lotlfest.com" target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">Visit LOTLfest.com</a>
+                    <div class="lotl-stats">
+                        <div class="lotl-stat">
+                            <div class="lotl-stat-number">5,400+</div>
+                            <div class="lotl-stat-label">Attendees in Year 3</div>
+                        </div>
+                        <div class="lotl-stat">
+                            <div class="lotl-stat-number">0</div>
+                            <div class="lotl-stat-label">Incidents in 4 Years</div>
+                        </div>
+                        <div class="lotl-stat">
+                            <div class="lotl-stat-number">10x</div>
+                            <div class="lotl-stat-label">Growth Since Year 1</div>
+                        </div>
+                        <div class="lotl-stat">
+                            <div class="lotl-stat-number">FREE</div>
+                            <div class="lotl-stat-label">Kids Zone</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/lotl-crowd.webp" alt="Love on the Lawn Festival crowd at Festival Park in Elgin, Illinois" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="involve" id="involve">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Involved</h2>
+                <p>Join us in building stronger communities</p>
+            </div>
+            <div class="involve-grid">
+                <div class="involve-card donate" id="donate">
+                    <h3>Make a Donation</h3>
+                    <p>Your contribution directly supports youth sports programs, community relief efforts, and family events that bring Elgin together.</p>
+                    <a href="#contact" class="btn">Donate Now</a>
+                </div>
+                <div class="involve-card volunteer">
+                    <h3>Volunteer With Us</h3>
+                    <p>From Love on the Lawn to community relief efforts, we're always looking for passionate people to join our mission.</p>
+                    <a href="#contact" class="btn">Join Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions? Want to partner with us? Get in touch.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Whether you're interested in sponsoring our programs, volunteering your time, or learning more about what we do, we'd love to hear from you.</p>
+                    <ul class="contact-details">
+                        <li><strong>Email:</strong> info@mikepagefoundation.org</li>
+                        <li><strong>Location:</strong> Elgin, Illinois</li>
+                        <li><strong>Festival:</strong> <a href="https://www.lotlfest.com" style="color: var(--secondary);">LOTLfest.com</a></li>
+                        <li><strong>Music:</strong> <a href="https://idmg.live" style="color: var(--secondary);">IDMG.live</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://instagram.com/mikepagelivin" target="_blank">IG</a>
+                        <a href="https://tiktok.com/@mikepageidmg" target="_blank">TT</a>
+                        <a href="https://instagram.com/loveonthelawnfestival" target="_blank">LOTL</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In</label>
+                            <select id="interest" name="interest">
+                                <option value="donate">Making a Donation</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="sponsor">Corporate Sponsorship</option>
+                                <option value="partner">Partnership Opportunity</option>
+                                <option value="grant">Grant Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Mike Page Foundation</h3>
+                    <p>Dedicated to youth empowerment, unity, and community uplift through sports, music, and humanitarian initiatives. Based in Elgin, Illinois—building stronger communities through love.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#lotl">Love on the Lawn</a></li>
+                        <li><a href="#involve">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Sponsorship Info</a></li>
+                        <li><a href="#">Volunteer Application</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.lotlfest.com">LOTLfest.com</a></li>
+                        <li><a href="https://idmg.live">IDMG.live</a></li>
+                        <li><a href="https://instagram.com/mikepagelivin">Instagram</a></li>
+                        <li><a href="https://tiktok.com/@mikepageidmg">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mike Page Foundation. All rights reserved. | A 501(c)(3) Nonprofit Organization</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
